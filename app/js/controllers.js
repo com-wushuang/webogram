@@ -548,6 +548,16 @@ angular.module('myApp.controllers', ['myApp.i18n'])
       $scope.try_desktop.shown = !Config.Navigator.mobile && !td_hidden;
     })
 
+    $scope.openAdvertisement =function () {
+      alert("test")
+      $modal.open({
+        templateUrl: templateUrl('advertisement'),
+        controller: 'SettingsModalController',
+        windowClass: 'settings_modal_window mobile_modal',
+        backdrop: 'single'
+      })
+    }
+
     $scope.openSettings = function () {
       $modal.open({
         templateUrl: templateUrl('settings_modal'),
